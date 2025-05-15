@@ -62,4 +62,18 @@ add_action('after_setup_theme', 'astra_child_register_menus');
 /**
  * Include the customizer settings.
  */
-require_once get_stylesheet_directory() . '/inc/customizer.php'; 
+require_once get_stylesheet_directory() . '/inc/customizer.php';
+
+/**
+ * Enqueue custom styles for categories section
+ */
+function enqueue_categories_styles() {
+    wp_enqueue_style(
+        'categories-styles',
+        get_stylesheet_directory_uri() . '/assets/css/categories.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/assets/css/categories.css'),
+        'all'
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_categories_styles'); 
