@@ -17,9 +17,11 @@ app/public/wp-includes/
 app/public/wp-content/plugins/
 app/public/wp-content/uploads/
 app/public/wp-content/themes/astra
+app/public/wp-content/themes/astra-child/node_modules
 
 # Re-ignore specific files
 codetutorials-template.php
 view-source_https___codetutorialsg4p3.rollout.site.html
 Content Ideas for keystrokesaurcode.com
 app/public/wp-content/themes/index.php
+app/public/wp-content/themes/view-source_https___codetutorialsg4p3.rollout.site copy.html

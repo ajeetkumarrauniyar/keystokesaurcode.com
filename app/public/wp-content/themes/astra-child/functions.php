@@ -46,4 +46,20 @@ function astra_child_enqueue_styles() {
         true
     );
 }
-add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles'); 
+add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles');
+
+/**
+ * Register navigation menus
+ */
+function astra_child_register_menus() {
+    register_nav_menus(array(
+        'primary' => esc_html__('Primary Menu', 'astra-child'),
+        'footer'  => esc_html__('Footer Menu', 'astra-child'),
+    ));
+}
+add_action('after_setup_theme', 'astra_child_register_menus');
+
+/**
+ * Include the customizer settings.
+ */
+require_once get_stylesheet_directory() . '/inc/customizer.php'; 
