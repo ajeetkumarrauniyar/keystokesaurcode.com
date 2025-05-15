@@ -115,5 +115,89 @@ function astra_child_customize_register($wp_customize) {
         'settings' => 'hero_background',
         'priority' => 70,
     )));
+
+    // Features Section
+    $wp_customize->add_section('astra_child_features_section', array(
+        'title'    => __('Features Section', 'astra-child'),
+        'priority' => 40,
+    ));
+
+    // Features Cards JSON
+    $wp_customize->add_setting('features_cards_json', array(
+        'default'           => json_encode([
+            [
+                'title' => 'Interactive Tutorials',
+                'desc' => 'Learn by doing with hands-on coding exercises that reinforce concepts in real-time.',
+                'icon' => 'lightning-bolt',
+                'bullets' => [
+                    'Live code execution',
+                    'Real-time feedback',
+                    'Step-by-step guidance'
+                ]
+            ],
+            [
+                'title' => 'Customizable Learning Paths',
+                'desc' => 'Create personalized learning journeys based on your skill level and career goals.',
+                'icon' => 'path',
+                'bullets' => [
+                    'Skill assessment',
+                    'Adaptive difficulty',
+                    'Progress tracking'
+                ]
+            ],
+            [
+                'title' => 'Community Support',
+                'desc' => 'Connect with fellow learners and mentors to solve problems and share knowledge.',
+                'icon' => 'users',
+                'bullets' => [
+                    'Discussion forums',
+                    'Code reviews',
+                    'Mentor matching'
+                ]
+            ],
+            [
+                'title' => 'Project-Based Learning',
+                'desc' => 'Build real-world applications that you can add to your portfolio while learning.',
+                'icon' => 'project',
+                'bullets' => [
+                    'Portfolio-ready projects',
+                    'Industry-relevant skills',
+                    'Guided implementation'
+                ]
+            ],
+            [
+                'title' => 'Code Challenges',
+                'desc' => 'Test your skills with competitive coding challenges and improve problem-solving abilities.',
+                'icon' => 'trophy',
+                'bullets' => [
+                    'Algorithm challenges',
+                    'Leaderboards',
+                    'Multiple solutions'
+                ]
+            ],
+            [
+                'title' => 'Database Integration',
+                'desc' => 'Learn how to connect your applications to databases and manage data effectively.',
+                'icon' => 'database',
+                'bullets' => [
+                    'SQL fundamentals',
+                    'ORM techniques',
+                    'Data modeling'
+                ]
+            ]
+        ], JSON_PRETTY_PRINT),
+        'sanitize_callback' => function($input) {
+            // Validate JSON
+            json_decode($input);
+            return (json_last_error() === JSON_ERROR_NONE) ? $input : '';
+        },
+    ));
+    $wp_customize->add_control('features_cards_json', array(
+        'label'    => __('Features Cards (JSON)', 'astra-child'),
+        'section'  => 'astra_child_features_section',
+        'type'     => 'textarea',
+        'priority' => 10,
+        'description' => __('Edit the features cards as JSON. Each card can have a title, desc, icon, and bullets array. Icons: lightning-bolt, path, users, project, trophy, database.', 'astra-child'),
+    ));
 }
 add_action('customize_register', 'astra_child_customize_register'); 
