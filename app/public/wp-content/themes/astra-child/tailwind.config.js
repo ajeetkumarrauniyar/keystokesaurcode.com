@@ -2,10 +2,19 @@
 module.exports = {
   content: [
     "./*.{php,html,js}",
-    "./template-parts/**/*.{php,html,js}"
+    './page-templates/**/*.php',
+    './assets/css/**/*.css',
+    './assets/css/src/components/**/*.css',
+    './template-parts/**/*.php',
+    './inc/**/*.php',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'system-ui', 'sans-serif'],
+        'space': ['Space Mono', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 } 

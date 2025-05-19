@@ -7,11 +7,13 @@
  */
 ?>
 
-<section id="categories" class="categories-section">
+<section id="categories" class="py-20 bg-neutral-800">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500">
+      <h2
+        class="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-500">
         <?php echo esc_html(get_theme_mod('categories_section_title', 'Categories')); ?>
+
       </h2>
       <p class="text-neutral-300 max-w-2xl mx-auto">
         <?php echo esc_html(get_theme_mod('categories_section_description', 'Explore our comprehensive library of tutorials across popular programming languages and frameworks.')); ?>
@@ -22,13 +24,13 @@
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Python Category -->
       <div
-        class="category-card python">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-white"
@@ -42,19 +44,22 @@
                   d="M12 2c-5.5 0-10 3.8-10 8.5 0 2.4 1 4.5 2.7 6L4 22l6.8-3.4c.4.1.8.1 1.2.1 5.5 0 10-3.8 10-8.5S17.5 2 12 2z"></path>
               </svg>
             </div>
-            <h3 class="category-title">Python</h3>
+            <h3 class="text-2xl font-bold text-white">Python</h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Master Python programming with tutorials ranging from
+            basics to advanced concepts.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -63,15 +68,13 @@
               </svg>
               <span>Data Science & ML</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -80,15 +83,13 @@
               </svg>
               <span>Web Development</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -99,20 +100,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">42 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">42 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -126,13 +125,13 @@
 
       <!-- JavaScript Category -->
       <div
-        class="category-card javascript">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-yellow-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-neutral-900"
@@ -152,19 +151,24 @@
                 <line x1="16" y1="20" x2="16.01" y2="20"></line>
               </svg>
             </div>
-            <h3 class="category-title">JavaScript</h3>
+            <h3 class="text-2xl font-bold text-white">
+              JavaScript
+            </h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Build dynamic web applications with modern JavaScript
+            frameworks and libraries.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -173,15 +177,13 @@
               </svg>
               <span>React & Vue</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -190,15 +192,13 @@
               </svg>
               <span>Node.js & Express</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -209,20 +209,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">56 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">56 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -236,13 +234,13 @@
 
       <!-- Java Category -->
       <div
-        class="category-card java">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-red-600/20 to-red-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-white"
@@ -256,19 +254,22 @@
                   d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
               </svg>
             </div>
-            <h3 class="category-title">Java</h3>
+            <h3 class="text-2xl font-bold text-white">Java</h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Develop enterprise-grade applications with Java's robust
+            ecosystem and frameworks.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -277,15 +278,13 @@
               </svg>
               <span>Spring Framework</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -294,15 +293,13 @@
               </svg>
               <span>Android Development</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -313,20 +310,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">38 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">38 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -340,13 +335,13 @@
 
       <!-- Ruby Category -->
       <div
-        class="category-card ruby">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-pink-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-white"
@@ -360,19 +355,22 @@
                   points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
-            <h3 class="category-title">Ruby</h3>
+            <h3 class="text-2xl font-bold text-white">Ruby</h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Build elegant web applications with Ruby on Rails and
+            other Ruby frameworks.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -381,15 +379,13 @@
               </svg>
               <span>Ruby on Rails</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -398,15 +394,13 @@
               </svg>
               <span>Sinatra</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -417,20 +411,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">24 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">24 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -444,13 +436,13 @@
 
       <!-- C# Category -->
       <div
-        class="category-card csharp">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-white"
@@ -464,19 +456,22 @@
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
-            <h3 class="category-title">C#</h3>
+            <h3 class="text-2xl font-bold text-white">C#</h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Create powerful applications with Microsoft's versatile
+            programming language.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -485,15 +480,13 @@
               </svg>
               <span>.NET Core</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -502,15 +495,13 @@
               </svg>
               <span>ASP.NET MVC</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -521,20 +512,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">31 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">31 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -548,13 +537,13 @@
 
       <!-- Go Category -->
       <div
-        class="category-card go">
+        class="group relative overflow-hidden rounded-lg border border-neutral-700 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]">
         <div
-          class="gradient-overlay"></div>
-        <div class="category-content">
+          class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-cyan-800/40 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+        <div class="relative p-6">
           <div class="flex items-center mb-4">
             <div
-              class="category-icon">
+              class="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8 text-white"
@@ -570,19 +559,22 @@
                   d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-            <h3 class="category-title">Go</h3>
+            <h3 class="text-2xl font-bold text-white">Go</h3>
           </div>
 
-          <div class="category-list">
-            <div class="category-item">
+          <p class="text-neutral-300 mb-6">
+            Build efficient, reliable, and scalable server-side
+            applications with Go.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -591,15 +583,13 @@
               </svg>
               <span>Microservices</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -608,15 +598,13 @@
               </svg>
               <span>Concurrency</span>
             </div>
-            <div class="category-item">
+            <div class="flex items-center text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 mr-2 text-cyan-400"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -627,20 +615,18 @@
             </div>
           </div>
 
-          <div class="category-footer">
-            <span class="tutorial-count">19 Tutorials</span>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-neutral-400">19 Tutorials</span>
             <a
               href="#"
-              class="explore-link">
+              class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center group">
               <span>Explore</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                class="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+                viewBox="0 0 24 24"
+                stroke="currentColor">
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -654,7 +640,9 @@
     </div>
 
     <div class="mt-16 text-center">
-      <a href="#latest-tutorials" class="inline-block px-8 py-3 bg-gradient-to-r from-cyan-400 to-teal-500 text-neutral-900 font-bold rounded-md transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+      <a
+        href="#latest-tutorials"
+        class="inline-block px-8 py-3 bg-gradient-to-r from-cyan-400 to-teal-500 text-neutral-900 font-bold rounded-md transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]">
         View All Categories
       </a>
     </div>

@@ -1,0 +1,45 @@
+/* Code block syntax highlighting */
+.font-mono {
+    font-family: 'Space Mono', monospace;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.text-purple-400 {
+    color: #c084fc;
+}
+
+.text-cyan-400 {
+    color: #22d3ee;
+}
+
+.text-yellow-400 {
+    color: #facc15;
+}
+
+/* Hover effects */
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+}
+
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+/* Transition effects */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+} 

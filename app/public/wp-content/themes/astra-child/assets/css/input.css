@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import component styles */
+@import 'components/base.css';
+@import 'components/waitlist.css';
+@import 'components/syntax.css';
+@import 'components/scrollbar.css';
+
+/* Custom styles can be added below this comment */

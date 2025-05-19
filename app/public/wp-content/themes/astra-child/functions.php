@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Astra Child Theme functions and definitions
  *
@@ -11,7 +12,9 @@
 /**
  * Enqueue parent theme styles
  */
-function astra_child_enqueue_styles() {
+function astra_child_enqueue_styles()
+{
+    // Parent theme style
     wp_enqueue_style(
         'astra-theme-css',
         get_template_directory_uri() . '/style.css',
@@ -19,7 +22,8 @@ function astra_child_enqueue_styles() {
         wp_get_theme('astra')->get('Version'),
         'all'
     );
-    
+
+    // Child theme style
     wp_enqueue_style(
         'astra-child-theme-css',
         get_stylesheet_directory_uri() . '/style.css',
@@ -51,7 +55,8 @@ add_action('wp_enqueue_scripts', 'astra_child_enqueue_styles');
 /**
  * Register navigation menus
  */
-function astra_child_register_menus() {
+function astra_child_register_menus()
+{
     register_nav_menus(array(
         'primary' => esc_html__('Primary Menu', 'astra-child'),
         'footer'  => esc_html__('Footer Menu', 'astra-child'),
@@ -65,15 +70,10 @@ add_action('after_setup_theme', 'astra_child_register_menus');
 require_once get_stylesheet_directory() . '/inc/customizer.php';
 
 /**
- * Enqueue custom styles for categories section
+ * Add support for post thumbnails
  */
-function enqueue_categories_styles() {
-    wp_enqueue_style(
-        'categories-styles',
-        get_stylesheet_directory_uri() . '/assets/css/categories.css',
-        array(),
-        filemtime(get_stylesheet_directory() . '/assets/css/categories.css'),
-        'all'
-    );
+function astra_child_setup()
+{
+    add_theme_support('post-thumbnails');
 }
-add_action('wp_enqueue_scripts', 'enqueue_categories_styles'); 
+add_action('after_setup_theme', 'astra_child_setup');

@@ -1,0 +1,94 @@
+/* Waitlist Page Styles */
+.waitlist-page {
+  background-color: #171717;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Form Elements */
+.waitlist-input {
+  @apply w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-md text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
+}
+
+.waitlist-checkbox {
+  @apply form-checkbox h-5 w-5 text-cyan-400 rounded border-neutral-700 focus:ring-cyan-400;
+}
+
+.waitlist-button {
+  @apply w-full px-6 py-4 bg-gradient-to-r from-cyan-400 to-teal-500 text-neutral-900 font-bold rounded-md transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)];
+}
+
+/* Modal */
+.modal-overlay {
+  @apply fixed inset-0 bg-neutral-900/80;
+}
+
+.modal-content {
+  @apply relative bg-neutral-800 p-8 rounded-lg max-w-md w-full mx-4 transform transition-all duration-300;
+}
+
+/* Success Modal Specific */
+#success-modal {
+  @apply fixed inset-0 flex items-center justify-center z-50;
+}
+
+#success-modal.hidden {
+  @apply hidden;
+}
+
+#modal-content {
+  @apply scale-95 opacity-0;
+}
+
+#modal-content.scale-100 {
+  @apply scale-100 opacity-100;
+}
+
+/* Success Icon Animation */
+.success-icon {
+  @apply w-16 h-16 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: linear-gradient(#0ff 1px, transparent 1px),
+    linear-gradient(to right, #0ff 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.1;
+}
+
+/* Feature Cards */
+.feature-icon {
+  @apply w-16 h-16 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4;
+}
+
+.feature-title {
+  @apply text-xl font-bold mb-2 text-white;
+}
+
+.feature-description {
+  @apply text-neutral-400;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .waitlist-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+} 

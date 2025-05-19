@@ -32,12 +32,15 @@ Tailwind utility classes can be used directly in your HTML or PHP templates. For
 
 ## File Structure
 
-- `src/input.css` - The source Tailwind CSS file with directives
-- `dist/output.css` - The compiled Tailwind CSS file
-- `dist/script.js` - JavaScript file for theme functionality
+- `assets/css/src/input.css` - The source Tailwind CSS file with directives
+  - `assets/css/src/components/` - Component-specific CSS files
+- `assets/css/dist/output.css` - The compiled Tailwind CSS file
+- `assets/js/dist/script.js` - JavaScript file for theme functionality
 - `functions.php` - WordPress theme functions including style/script enqueuing
 - `header.php` - Theme header template
 - `style.css` - Main theme stylesheet
+
+See `assets/css/README.md` for detailed information about the CSS structure.
 
 ## Development
 
