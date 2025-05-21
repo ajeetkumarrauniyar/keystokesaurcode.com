@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Homepage
  * 
@@ -14,8 +15,8 @@ get_template_part('template-parts/hero');
 get_template_part('template-parts/features');
 get_template_part('template-parts/categories');
 get_template_part('template-parts/latest-tutorials');
+get_template_part('template-parts/newsletter');
 
 // Add other sections here as they're developed
-// get_template_part('template-parts/newsletter');
 
-get_footer(); 
+get_footer();

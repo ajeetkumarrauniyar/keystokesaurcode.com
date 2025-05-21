@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./dist/output.css",
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./dist/output.css && npx esbuild ./assets/js/script.js --bundle --outfile=./dist/script.js --minify",
     "watch": "npx tailwindcss -i ./assets/css/input.css -o ./dist/output.css --watch",
     "dev": "concurrently \"npm run watch\" \"browser-sync start --proxy 'localhost:8888' --files './dist/*.css, ./**/*.php'\""
   },
@@ -15,6 +15,7 @@
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "concurrently": "^9.1.2",
+    "esbuild": "^0.25.4",
     "tailwindcss": "^3.3.5"
   }
 }
