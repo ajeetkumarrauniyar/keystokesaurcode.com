@@ -104,7 +104,7 @@
                                 <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                             </p>
 
-                            //TODO:-Add code block detection and display
+                            <!-- //TODO:-Add code block detection and display -->
 
                             <a href="<?php the_permalink(); ?>"
                                 class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1">
