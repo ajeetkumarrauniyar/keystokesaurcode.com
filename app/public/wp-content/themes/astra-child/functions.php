@@ -60,8 +60,10 @@ function astra_child_register_menus()
 {
     register_nav_menus(array(
         'primary' => esc_html__('Primary Menu', 'astra-child'),
-        'footer'  => esc_html__('Footer Menu', 'astra-child'),
+        'footer'  => esc_html__('Footer Menu Add', 'astra-child'),
     ));
+
+    register_nav_menu('footer_menu', __('Footer Menu Add', 'astra-child'));
 }
 add_action('after_setup_theme', 'astra_child_register_menus');
 
